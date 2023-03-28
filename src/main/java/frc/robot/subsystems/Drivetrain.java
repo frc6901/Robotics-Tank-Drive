@@ -23,5 +23,8 @@ public class Drivetrain extends SubsystemBase {
     MotorControllerGroup m_right = new MotorControllerGroup(m_rightSRX, m_rightSRX_1);
 
     private DifferentialDrive m_drive = new DifferentialDrive(m_left, m_right);
-    
+
+    public void drive(double forward, double rotate) {
+        m_drive.arcadeDrive(forward, rotate);
+      }
 }
